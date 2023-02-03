@@ -5,7 +5,7 @@ import ReviewCard from "./ReviewCard";
 
 const ReviewSection = () => {
   return (
-    <section>
+    <section id='testimonials'>
       <Container>
         <div className='px-4 py-16 mx-auto md:max-w-full md:px-24 lg:px-8 lg:py-20'>
           <div className='mb-10 md:mx-auto text-center'>

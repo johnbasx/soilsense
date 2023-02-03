@@ -1,4 +1,5 @@
 import { Popover } from "@headlessui/react";
+import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Fragment } from "react";
 import { TbArrowRight, TbChevronUp, TbMenu2 } from "react-icons/tb";
@@ -25,14 +26,21 @@ function MobileNavLink({ children, ...props }: MobileNavProps) {
   );
 }
 
-export function Header() {
+export function Header({ carousel = false, dark = true }) {
   return (
     <header className='relative'>
-      <div className='absolute top-0 h-[50vh] right-0 w-full'>
-        <Carousel />
-      </div>
-      <nav>
-        <Container className='relative z-50 flex justify-between py-4 mb-[40vh] md:mb-[40vh]'>
+      {carousel && (
+        <div className='absolute top-0 h-[50vh] right-0 w-full'>
+          <Carousel />
+        </div>
+      )}
+      <nav className={clsx(dark ? "bg-primary-500" : "bg-transparent")}>
+        <Container
+          className={clsx(
+            "relative z-50 flex justify-between py-4",
+            carousel ? "mb-[40vh]" : "mb-0"
+          )}
+        >
           <Popover as={Fragment}>
             {({ open }) => (
               <>
@@ -61,6 +69,7 @@ export function Header() {
                   </ButtonLink>
                   <ButtonLink
                     href='#'
+                    variant={dark ? "black" : "regular"}
                     className='hidden lg:inline-flex justify-center items-center space-x-2 font-semibold'
                   >
                     <span>Login</span> <TbArrowRight />

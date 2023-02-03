@@ -43,7 +43,7 @@ export const footerLinksData = [
       {
         id: createID(),
         name: "Testimonials",
-        link: "/testimonials",
+        link: "#testimonials",
       },
       {
         id: createID(),

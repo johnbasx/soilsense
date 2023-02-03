@@ -12,7 +12,7 @@ export const navigationLinks = [
   {
     id: createID(),
     label: "Services",
-    link: "#!",
+    link: "#footer",
   },
   {
     id: createID(),
@@ -22,7 +22,7 @@ export const navigationLinks = [
   {
     id: createID(),
     label: "Contact",
-    link: "#!",
+    link: "/contact-page",
   },
 ];
 

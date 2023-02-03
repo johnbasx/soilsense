@@ -10,6 +10,7 @@ type buttonVariant =
   | "outline"
   | "outline-white"
   | "white"
+  | "black"
   | "ghost"
   | "link";
 type buttonSize = "regular" | "large" | "small";
@@ -43,13 +44,15 @@ export const Button = ({
         size === "regular" && "px-4 py-2 text-sm",
         size === "small" && "px-2 py-2",
         variant === "regular" &&
-          "bg-primary-500 text-white hover:bg-primary-600 disabled:hover:bg-primary-500",
+          "bg-primary-500 text-white hover:bg-primary-600 disabled:hover:bg-primary-200",
         variant === "outline" &&
           "border border-primary-500 text-primary-50 hover:border-primary-600 hover:bg-primary-600 disabled:border-primary-100 disabled:bg-transparent",
         variant === "outline-white" &&
           "border border-primary-50 text-primary-50 hover:border-primary-50 hover:bg-primary-50 hover:text-primary-900 disabled:border-primary-100 disabled:bg-transparent",
         variant === "white" &&
           "text-primary-900 hover:bg-gray-100 bg-white disabled:hover:bg-gray-50",
+        variant === "black" &&
+          "text-white hover:bg-gray-900 bg-black disabled:hover:bg-gray-200",
         variant === "ghost" &&
           "text-primary-50 hover:bg-primary-600 disabled:hover:bg-transparent",
         variant === "link" &&
@@ -74,7 +77,7 @@ export const ButtonLink = ({
     <a
       href={href}
       className={clsx(
-        "h-auto w-auto rounded-md text-xs font-medium transition-all duration-150",
+        "rounded-md text-sm font-medium transition-all duration-150",
         className,
         "disabled:cursor-not-allowed disabled:opacity-50",
         size === "large" && "px-5 py-3 text-base",
@@ -88,6 +91,8 @@ export const ButtonLink = ({
           "border border-primary-50 text-primary-50 hover:border-primary-50 hover:bg-primary-50 hover:text-primary-900 disabled:border-primary-100 disabled:bg-transparent",
         variant === "white" &&
           "text-primary-900 hover:bg-gray-100 bg-white disabled:hover:bg-gray-50",
+        variant === "black" &&
+          "text-white hover:bg-gray-900 bg-black disabled:hover:bg-gray-200",
         variant === "ghost" &&
           "text-primary-500 hover:bg-primary-600 disabled:hover:bg-transparent",
         variant === "link" &&

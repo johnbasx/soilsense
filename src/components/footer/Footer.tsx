@@ -5,7 +5,11 @@ import Copyrights from "./Copyrights";
 
 export function Footer() {
   return (
-    <footer aria-label='Site Footer' className='relative text-white'>
+    <footer
+      aria-label='Site Footer'
+      id='footer'
+      className='relative text-white'
+    >
       <div className='absolute bg-green-land bg-no-repeat bg-cover -z-10 brightness-75 inset-0 w-full h-full' />
       <Container>
         <div className='bg-transparent'>
