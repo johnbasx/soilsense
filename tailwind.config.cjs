@@ -31,13 +31,13 @@ module.exports = {
         },
       },
       fontSize: {
-        "3xs": ["0.65rem", { lineHeight: "0.5rem" }],
         "2xs": ["0.7rem", { lineHeight: "0.5rem" }],
+        "3xs": ["0.65rem", { lineHeight: "0.5rem" }],
         "8xl": ["6rem", { lineHeight: "1" }],
         "9xl": ["8rem", { lineHeight: "1" }],
       },
       backgroundImage: {
-        "green-land": "url('./src/assets/images/green-land.jpg')",
+        "green-land": "url('@/assets/images/green-land.jpg')",
       },
       borderRadius: {
         "4xl": "2rem",
