@@ -5,7 +5,6 @@ import { createID } from "@/utils/helpers";
 import Image1 from "@/assets/images/1.jpeg";
 import Image2 from "@/assets/images/2.jpg";
 import Image3 from "@/assets/images/3.jpg";
-import { ImgProps } from "react-optimized-image/lib/components/Img";
 
 export interface CarouselProps {
   id: string;
