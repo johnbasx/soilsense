@@ -2,6 +2,7 @@ import React from "react";
 import ReactCarousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CustomDot, { carouselItems } from "./CustomDot";
+import Image from "@/components/image/Image";
 
 const responsive = {
   superLargeDesktop: {
@@ -55,11 +56,16 @@ const Carousel = () => {
                 </p>
               </div>
             </div>
-            <img
+            <Image
               src={item.src}
               alt={"Image-carousel-" + item.heading}
               className='object-cover w-full h-[50vh]'
             />
+            {/* <img
+              src={item.src}
+              alt={"Image-carousel-" + item.heading}
+              className='object-cover w-full h-[50vh]'
+            /> */}
           </div>
         ))}
       </ReactCarousel>

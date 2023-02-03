@@ -1,29 +1,36 @@
 import { DotProps } from "react-multi-carousel/lib/types";
-import React from "react";
 import clsx from "clsx";
 import { MdMaximize } from "react-icons/md";
 import { createID } from "@/utils/helpers";
-import image1 from "@/assets/images/1.jpeg";
-import image2 from "@/assets/images/2.jpg";
-import image3 from "@/assets/images/3.jpg";
+import Image1 from "@/assets/images/1.jpeg";
+import Image2 from "@/assets/images/2.jpg";
+import Image3 from "@/assets/images/3.jpg";
+import { ImgProps } from "react-optimized-image/lib/components/Img";
 
-export const carouselItems = [
+export interface CarouselProps {
+  id: string;
+  src: string;
+  heading: string;
+  tagline: string;
+}
+
+export const carouselItems: CarouselProps[] = [
   {
     id: createID(),
-    src: image3,
+    src: Image3,
     heading: "Soil Sense",
     tagline: "Innovation in precise Agriculture",
   },
   {
     id: createID(),
-    src: image1,
+    src: Image1,
     heading: "Smart irrigation ",
     tagline:
       "Reduces water scarcity risk and prevents exploitation of underground water table",
   },
   {
     id: createID(),
-    src: image2,
+    src: Image2,
     heading: "Soil Nutrients",
     tagline: "Balance with Organic Manure",
   },
