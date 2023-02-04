@@ -15,7 +15,7 @@ const pageRoutes = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/contact-page",
+    path: "contact-page",
     element: <ContactPage />,
   },
 ]);
