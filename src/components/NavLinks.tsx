@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { createID } from "../utils/helpers";
-
+import { createID } from "@/utils/helpers";
+import { Link } from "react-router-dom";
 export const navigationLinks = [
   {
     id: createID(),
     label: "Home",
-    link: "#!",
+    link: "/",
   },
   {
     id: createID(),
@@ -32,9 +32,9 @@ export function NavLinks() {
   return (
     <>
       {navigationLinks.map(({ label, id, link }, index) => (
-        <a
+        <Link
+          to={link}
           key={"navigation" + id}
-          href={link}
           className='relative -my-2 -mx-3 rounded-lg px-3 py-2 text-sm text-white transition-colors duration-200 hover:text-primary-50 hover:bg-primary-100/50 font-semibold'
           // onMouseEnter={() => setHoveredIndex(index)}
           // onMouseLeave={() => setHoveredIndex(0)}
@@ -54,7 +54,7 @@ export function NavLinks() {
             {/* )} */}
           </AnimatePresence>
           <span className='relative z-10'>{label}</span>
-        </a>
+        </Link>
       ))}
     </>
   );
